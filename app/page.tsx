@@ -1,12 +1,28 @@
-'use client';
+// 'use client';
 
+import Head from 'next/head';
 import Link from 'next/link';
+
+export const metadata = {
+  title: "NomaApp – AI-Powered Crop Diagnosis",
+  description: "NomaApp helps farmers detect crop diseases and pests instantly using AI-powered photo analysis and smart recommendations.",
+};
+
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+    <>
+      <Head>
+        <title>NomaApp – AI-Powered Crop Diagnosis</title>
+        <meta
+          name="description"
+          content="NomaApp helps farmers detect crop diseases and pests instantly using AI-powered photo analysis and smart recommendations."
+        />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+        {/* your existing code here */}
+        <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
@@ -383,6 +399,17 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
+
+
+// export default function Home() {
+//   return (
+//     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+//       {/* Header */}
+      
+//     </div>
+//   );
+// }

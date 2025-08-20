@@ -55,16 +55,28 @@ export default function DashboardPage() {
     setShowTreatmentModal(true);
   };
 
-  const handleSubmitTreatmentPlan = async (e) => {
+  // const handleSubmitTreatmentPlan = async (e) => {
+  //   e.preventDefault();
+
+  //   // Simulate treatment plan submission
+  //   setTimeout(() => {
+  //     setShowTreatmentModal(false);
+  //     // Show success notification
+  //     alert('Treatment plan scheduled successfully! Reminders have been set up.');
+  //   }, 1000);
+  // };
+
+  const handleSubmitTreatmentPlan = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Simulate treatment plan submission
-    setTimeout(() => {
-      setShowTreatmentModal(false);
-      // Show success notification
-      alert('Treatment plan scheduled successfully! Reminders have been set up.');
-    }, 1000);
+    setIsSubmitting(true);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    setIsSubmitting(false);
+    alert("Treatment plan submitted successfully!");
   };
+
 
   const handleSubmitExpertRequest = async (e) => {
     e.preventDefault();

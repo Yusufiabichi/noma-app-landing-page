@@ -1,0 +1,8 @@
+{
+  "/auth/page": "/auth",
+  "/_not-found/page": "/_not-found",
+  "/dashboard/page": "/dashboard",
+  "/pricing/page": "/pricing",
+  "/diagnosis/page": "/diagnosis",
+  "/page": "/"
+}

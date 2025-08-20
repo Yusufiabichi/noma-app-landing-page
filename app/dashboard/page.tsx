@@ -70,24 +70,35 @@ export default function DashboardPage() {
     e.preventDefault();
 
     // Simulate treatment plan submission
-    setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    alert("Treatment plan submitted successfully!");
+    setTimeout(() => {
+      setShowTreatmentModal(false);
+      // Show success notification
+      alert("Treatment plan scheduled successfully! Reminders have been set up.");
+    }, 1000);
   };
 
 
-  const handleSubmitExpertRequest = async (e) => {
+  // const handleSubmitExpertRequest = async (e) => {
+  //   e.preventDefault();
+
+  //   // Simulate expert request submission
+  //   setTimeout(() => {
+  //     setShowExpertModal(false);
+  //     // Show success notification
+  //     alert('Expert consultation request submitted! We will contact you within 24 hours.');
+  //   }, 1000);
+  // };
+
+  const handleSubmitExpertRequest = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Simulate expert request submission
     setTimeout(() => {
       setShowExpertModal(false);
-      // Show success notification
-      alert('Expert consultation request submitted! We will contact you within 24 hours.');
+      alert("Expert request submitted successfully!");
     }, 1000);
   };
+
 
   return (
     <div className="min-h-screen bg-gray-50">

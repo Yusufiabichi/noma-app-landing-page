@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function DashboardPage() {
   const [selectedTab, setSelectedTab] = useState('overview');
@@ -107,7 +108,15 @@ export default function DashboardPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <Link href="/" className="flex items-center">
-              <span className="text-3xl font-[\'Pacifico\'] text-green-600">NomaApp</span>
+              <span className="text-3xl font-[\'Pacifico\'] text-green-600">
+                <Image 
+                  src="/nomaapplogo.png"
+                  alt="Yusuf - Full Stack Developer"
+                  width={10} // or your desired width
+                  height={10} // or your desired height
+                  className="w-20 h-30 object-cover object-top"
+                />
+              </span>
             </Link>
             <nav className="flex items-center space-x-6">
               <Link href="/dashboard" className="text-green-600 font-medium">

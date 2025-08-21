@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: "NomaApp – AI-Powered Crop Diagnosis",
@@ -26,7 +27,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <span className="text-3xl font-[\'Pacifico\'] text-green-600">NomaApp</span>
+              <span className="text-3xl font-[\'Pacifico\'] text-green-600">
+                <Image 
+                  src="/nomaapplogo.png"
+                  alt="Yusuf - Full Stack Developer"
+                  width={10} // or your desired width
+                  height={10} // or your desired height
+                  className="w-20 h-30 object-cover object-top"
+                />
+              </span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#features" className="text-gray-700 hover:text-green-600 transition-colors cursor-pointer">Features</a>

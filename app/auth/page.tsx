@@ -4,6 +4,12 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+
+// export const metadata = {
+//   title: "NomaApp AI",
+//   description: "NomaApp helps farmers detect crop diseases and pests instantly using AI-powered photo analysis and smart recommendations.",
+// };
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -89,7 +95,15 @@ export default function AuthPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <Link href="/" className="flex items-center">
-              <span className="text-3xl font-['Pacifico'] text-green-600">NomaApp</span>
+              <span className="text-3xl font-['Pacifico'] text-green-600">
+                <Image 
+                  src="/nomaapplogo.png"
+                  alt="Yusuf - Full Stack Developer"
+                  width={10} // or your desired width
+                  height={10} // or your desired height
+                  className="w-20 h-30 object-cover object-top"
+                />
+              </span>
             </Link>
           </div>
         </div>

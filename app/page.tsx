@@ -30,7 +30,7 @@ export default function Home() {
               <span className="text-3xl font-[\'Pacifico\'] text-green-600">
                 <Image 
                   src="/nomaapplogo.png"
-                  alt="Yusuf - Full Stack Developer"
+                  alt="NomaApp logo"
                   width={10} // or your desired width
                   height={10} // or your desired height
                   className="w-20 h-30 object-cover object-top"
@@ -61,18 +61,20 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              AI-Powered Crop &amp; Pest Diagnosis
+            <h1 className="text-5xl md:text-5xl font-bold mb-6 leading-tight">
+              AI-Powered Crop Disease &amp; Pest Diagnosis App
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
               Transform your farming with intelligent disease detection and personalized treatment recommendations. Protect your crops with the power of artificial intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/diagnosis" className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">
-                Start Free Diagnosis
+                {/* Start Free Diagnosis */}
+                Join the Waitlist
               </Link>
               <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-colors cursor-pointer whitespace-nowrap">
-                Watch Demo
+                {/* Watch Demo */}
+                Get Early Access
               </button>
             </div>
           </div>

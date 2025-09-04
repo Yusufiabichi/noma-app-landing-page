@@ -47,7 +47,7 @@ export default function Home() {
               <Link href="/auth" className="text-gray-700 hover:text-green-600 transition-colors cursor-pointer whitespace-nowrap">
                 Sign In
               </Link>
-              <Link href="/auth" className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">
+              <Link href="/auth" className="bg-noma-green text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">
                 Get Started
               </Link>
             </div>
@@ -55,164 +55,268 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
-               style={{backgroundImage: `url(\'https://readdy.ai/api/search-image?query=Beautiful%20agricultural%20landscape%20with%20green%20crops%20growing%20in%20fertile%20fields%20under%20bright%20blue%20sky%2C%20modern%20farming%20technology%20integrated%20seamlessly%20with%20nature%2C%20vibrant%20green%20colors%2C%20professional%20photography%20style%2C%20high%20resolution%2C%20peaceful%20rural%20setting%20with%20mountains%20in%20background&width=1920&height=1080&seq=hero-bg&orientation=landscape\')`}}>
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+     {/* Hero Section */}
+      <section
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      // style={{backgroundImage: `url(\'https://readdy.ai/api/search-image?query=Beautiful%20agricultural%20landscape%20with%20green%20crops%20growing%20in%20fertile%20fields%20under%20bright%20blue%20sky%2C%20modern%20farming%20technology%20integrated%20seamlessly%20with%20nature%2C%20vibrant%20green%20colors%2C%20professional%20photography%20style%2C%20high%20resolution%2C%20peaceful%20rural%20setting%20with%20mountains%20in%20background&width=1920&height=1080&seq=hero-bg&orientation=landscape\')`}}>
+        style={{
+          backgroundImage: "url('/6.jpg')" // put a static hero image in /public
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-noma-offwhite">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-5xl font-bold mb-6 leading-tight">
-              AI-Powered Crop Disease &amp; Pest Diagnosis App
+            {/* Headline */}
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
+              Helping African Smallholder Farmers Protect Their Crops with AI
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Transform your farming with intelligent disease detection and personalized treatment recommendations. Protect your crops with the power of artificial intelligence.
+
+            {/* Subheadline */}
+            <p className="text-lg md:text-2xl mb-8 text-noma-lightgreen leading-relaxed">
+              NomaApp is launching in <span className="font-semibold text-white">3 months</span>. 
+              Diagnose crop diseases and pests instantly with your phone, 
+              get personalized, eco-friendly solutions, and save your harvest.
             </p>
+
+            {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/diagnosis" className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">
-                {/* Start Free Diagnosis */}
+              <Link
+                href="/waitlist"
+                className="bg-noma-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-800 transition-colors cursor-pointer whitespace-nowrap shadow-lg"
+              >
                 Join the Waitlist
               </Link>
-              <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-colors cursor-pointer whitespace-nowrap">
-                {/* Watch Demo */}
-                Get Early Access
-              </button>
+              <Link
+                href="#demo"
+                className="bg-noma-gray/70 backdrop-blur-sm text-noma-offwhite px-8 py-4 rounded-full text-lg font-semibold hover:bg-noma-gray transition-colors cursor-pointer whitespace-nowrap"
+              >
+                Watch Demo
+              </Link>
+            </div>
+
+            {/* Countdown / Launch Reminder */}
+            <div className="mt-6 text-noma-offwhite/80 text-sm md:text-base">
+              🚀 MVP Launching <span className="font-semibold text-white">November 2025</span> — 
+              Be among the first to use it!
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+
+     {/* Features Section */}
+      <section id="features" className="py-20 bg-noma-offwhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Powerful Features</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Advanced AI technology meets practical farming solutions to give you the tools you need for healthier crops
+            <h2 className="text-4xl md:text-5xl font-bold text-noma-green mb-4">
+              Smart Farming Made Simple
+            </h2>
+            <p className="text-xl text-noma-gray max-w-3xl mx-auto">
+              NomaApp combines the power of AI with practical solutions 
+              to help African smallholder farmers protect their crops, 
+              reduce losses, and grow healthier harvests.
             </p>
           </div>
           
+          {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mb-6">
-                <i className="ri-camera-lens-line text-white text-2xl w-8 h-8 flex items-center justify-center"></i>
+            
+            {/* Feature 1 */}
+            <div className="bg-gradient-to-br from-noma-green/10 to-noma-lightgreen/20 p-8 rounded-2xl shadow-sm">
+              <div className="w-16 h-16 bg-noma-green rounded-2xl flex items-center justify-center mb-6">
+                <i className="ri-camera-lens-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Instant Photo Analysis</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Simply snap a photo of your crop and get instant AI-powered diagnosis of diseases, pests, and nutritional deficiencies with 95% accuracy rate.
+              <h3 className="text-2xl font-bold text-noma-green mb-4">Instant Photo Diagnosis</h3>
+              <p className="text-noma-gray leading-relaxed">
+                Take a photo of your crop and get quick AI-powered diagnosis of diseases and pests — 
+                saving you time and preventing crop losses early.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <i className="ri-brain-line text-white text-2xl w-8 h-8 flex items-center justify-center"></i>
+            {/* Feature 2 */}
+            <div className="bg-gradient-to-br from-noma-yellow/10 to-noma-yellow/20 p-8 rounded-2xl shadow-sm">
+              <div className="w-16 h-16 bg-noma-yellow rounded-2xl flex items-center justify-center mb-6">
+                <i className="ri-brain-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Smart Recommendations</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Get personalized treatment plans and actionable recommendations based on your specific crop type, location, and growing conditions.
+              <h3 className="text-2xl font-bold text-noma-green mb-4">Personalized Recommendations</h3>
+              <p className="text-noma-gray leading-relaxed">
+                Get clear, farmer-friendly advice tailored to your crop and location, 
+                with eco-friendly treatment options that protect your soil and harvest.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
-                <i className="ri-line-chart-line text-white text-2xl w-8 h-8 flex items-center justify-center"></i>
+            {/* Feature 3 */}
+            <div className="bg-gradient-to-br from-noma-gray/10 to-noma-offwhite p-8 rounded-2xl shadow-sm">
+              <div className="w-16 h-16 bg-noma-gray rounded-2xl flex items-center justify-center mb-6">
+                <i className="ri-line-chart-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Progress Tracking</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Monitor your crop health over time with detailed analytics and track the effectiveness of treatments with visual progress reports.
+              <h3 className="text-2xl font-bold text-noma-green mb-4">Track Crop Health</h3>
+              <p className="text-noma-gray leading-relaxed">
+                Monitor your farm’s progress over time with simple reports 
+                to see what works and make better farming decisions.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center mb-6">
-                <i className="ri-earth-line text-white text-2xl w-8 h-8 flex items-center justify-center"></i>
+            {/* Feature 4 */}
+            <div className="bg-gradient-to-br from-noma-green/10 to-noma-lightgreen/20 p-8 rounded-2xl shadow-sm">
+              <div className="w-16 h-16 bg-noma-green rounded-2xl flex items-center justify-center mb-6">
+                <i className="ri-earth-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Weather Integration</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Get weather-based insights and alerts to prevent disease outbreaks and optimize treatment timing based on local conditions.
+              <h3 className="text-2xl font-bold text-noma-green mb-4">Weather Insights</h3>
+              <p className="text-noma-gray leading-relaxed">
+                Stay ahead of rain, drought, and disease outbreaks with 
+                timely alerts based on your local weather conditions.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                <i className="ri-community-line text-white text-2xl w-8 h-8 flex items-center justify-center"></i>
+            {/* Feature 5 */}
+            <div className="bg-gradient-to-br from-noma-yellow/10 to-noma-yellow/20 p-8 rounded-2xl shadow-sm">
+              <div className="w-16 h-16 bg-noma-yellow rounded-2xl flex items-center justify-center mb-6">
+                <i className="ri-community-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Network</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Connect with agricultural experts and fellow farmers for advice, share experiences, and get professional consultations when needed.
+              <h3 className="text-2xl font-bold text-noma-green mb-4">Farmer Community</h3>
+              <p className="text-noma-gray leading-relaxed">
+                Connect with experts and fellow farmers, share experiences, 
+                and learn best practices that improve your harvest.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6">
-                <i className="ri-shield-check-line text-white text-2xl w-8 h-8 flex items-center justify-center"></i>
+            {/* Feature 6 */}
+            <div className="bg-gradient-to-br from-noma-gray/10 to-noma-offwhite p-8 rounded-2xl shadow-sm">
+              <div className="w-16 h-16 bg-noma-gray rounded-2xl flex items-center justify-center mb-6">
+                <i className="ri-shield-check-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Organic Solutions</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Access eco-friendly and organic treatment options with detailed application guides to maintain sustainable farming practices.
+              <h3 className="text-2xl font-bold text-noma-green mb-4">Sustainable Solutions</h3>
+              <p className="text-noma-gray leading-relaxed">
+                Access organic and eco-friendly options that are safe for your crops, 
+                your soil, and your family’s future.
               </p>
             </div>
           </div>
+
+          {/* CTA under Features */}
+          <div className="text-center mt-16">
+            <Link
+              href="#waitlist"
+              className="bg-noma-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-800 transition-colors shadow-lg"
+            >
+              Join the waitlist now!
+            </Link>
+          </div>
         </div>
       </section>
+
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 bg-gray-50">
+      <section id="how-it-works" className="py-20 bg-noma-offwhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get crop diagnosis in three simple steps using advanced AI technology
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              How NomaApp Works
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Protect your crops in <span className="text-noma-green font-semibold">3 simple steps</span> 
+              using AI technology designed for African smallholder farmers.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
+            {/* Step 1 */}
             <div className="text-center">
               <div className="relative mb-8">
-                <img src="https://readdy.ai/api/search-image?query=Farmer%20holding%20smartphone%20taking%20high%20quality%20photo%20of%20crop%20plants%20in%20agricultural%20field%2C%20close-up%20shot%20of%20mobile%20phone%20camera%20capturing%20diseased%20plant%20leaves%2C%20modern%20technology%20meets%20traditional%20farming%2C%20bright%20natural%20lighting%2C%20professional%20photography&width=400&height=300&seq=step1&orientation=landscape" 
-                     alt="Take Photo" className="w-full h-64 object-cover object-top rounded-2xl" />
-                <div className="absolute -top-4 -right-4 bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">
+                <img 
+                  src="https://readdy.ai/api/search-image?query=Farmer%20holding%20smartphone%20taking%20high%20quality%20photo%20of%20crop%20plants%20in%20agricultural%20field%2C%20close-up%20shot%20of%20mobile%20phone%20camera%20capturing%20diseased%20plant%20leaves%2C%20modern%20technology%20meets%20traditional%20farming%2C%20bright%20natural%20lighting%2C%20professional%20photography&width=400&height=300&seq=step1&orientation=landscape" 
+                  alt="Take Photo" 
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg" 
+                />
+                <div className="absolute -top-4 -right-4 bg-noma-green text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md">
                   1
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Take a Photo</h3>
               <p className="text-gray-700 leading-relaxed">
-                Simply use your smartphone to capture a clear image of the affected crop or plant area. Our AI works with any mobile device camera.
+                Use any smartphone camera to capture your crop. 
+                No expensive equipment needed — NomaApp works even in low-connectivity areas.
               </p>
             </div>
-            
+
+            {/* Step 2 */}
             <div className="text-center">
               <div className="relative mb-8">
-                <img src="https://readdy.ai/api/search-image?query=Advanced%20artificial%20intelligence%20analysis%20visualization%2C%20digital%20brain%20processing%20agricultural%20data%2C%20futuristic%20AI%20interface%20analyzing%20plant%20diseases%20with%20glowing%20neural%20networks%2C%20high-tech%20computer%20vision%20technology%2C%20blue%20and%20green%20color%20scheme%2C%20scientific%20accuracy&width=400&height=300&seq=step2&orientation=landscape" 
-                     alt="AI Analysis" className="w-full h-64 object-cover object-top rounded-2xl" />
-                <div className="absolute -top-4 -right-4 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">
+                <img 
+                  src="https://readdy.ai/api/search-image?query=Advanced%20artificial%20intelligence%20analysis%20visualization%2C%20digital%20brain%20processing%20agricultural%20data%2C%20futuristic%20AI%20interface%20analyzing%20plant%20diseases%20with%20glowing%20neural%20networks%2C%20high-tech%20computer%20vision%20technology%2C%20blue%20and%20green%20color%20scheme%2C%20scientific%20accuracy&width=400&height=300&seq=step2&orientation=landscape" 
+                  alt="AI Analysis" 
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg" 
+                />
+                <div className="absolute -top-4 -right-4 bg-noma-yellow text-gray-900 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md">
                   2
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Analysis</h3>
               <p className="text-gray-700 leading-relaxed">
-                Our advanced machine learning algorithms analyze your image in seconds, identifying diseases, pests, and nutritional issues with high accuracy.
+                Our AI scans the photo in seconds to detect diseases, pests, and nutrient issues 
+                with <span className="font-semibold text-noma-green">95% accuracy</span>.
               </p>
             </div>
-            
+
+            {/* Step 3 */}
             <div className="text-center">
               <div className="relative mb-8">
-                <img src="https://readdy.ai/api/search-image?query=Professional%20agricultural%20treatment%20recommendations%20displayed%20on%20tablet%20screen%2C%20detailed%20crop%20care%20instructions%20with%20visual%20guides%2C%20farmer%20implementing%20AI-suggested%20solutions%20in%20greenhouse%20environment%2C%20successful%20crop%20recovery%2C%20modern%20farming%20tools%20and%20techniques&width=400&height=300&seq=step3&orientation=landscape" 
-                     alt="Get Recommendations" className="w-full h-64 object-cover object-top rounded-2xl" />
-                <div className="absolute -top-4 -right-4 bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">
+                <img 
+                  src="https://readdy.ai/api/search-image?query=Professional%20agricultural%20treatment%20recommendations%20displayed%20on%20tablet%20screen%2C%20detailed%20crop%20care%20instructions%20with%20visual%20guides%2C%20farmer%20implementing%20AI-suggested%20solutions%20in%20greenhouse%20environment%2C%20successful%20crop%20recovery%2C%20modern%20farming%20tools%20and%20techniques&width=400&height=300&seq=step3&orientation=landscape" 
+                  alt="Get Recommendations" 
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg" 
+                />
+                <div className="absolute -top-4 -right-4 bg-noma-lightgreen text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md">
                   3
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Recommendations</h3>
               <p className="text-gray-700 leading-relaxed">
-                Receive detailed treatment plans, product recommendations, and step-by-step guides tailored to your specific crop and growing conditions.
+                Receive instant eco-friendly treatment plans and 
+                step-by-step guidance to save your harvest — tailored to your crop & location.
               </p>
             </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-16 text-center">
+            <a 
+              href="./waitlist/waitlist.tsx" 
+              className="bg-noma-green text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-green-800 transition"
+            >
+              Join the Waitlist
+            </a>
           </div>
         </div>
       </section>
 
+
+
+      {/* Patner With us */}
+
+      <section id="partners" className="py-20 bg-noma-green text-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Partner With Us</h2>
+          <p className="text-lg mb-8">
+            We are building the future of AI-powered agriculture in Africa. 
+            Join us as an investor, research collaborator, or NGO partner to scale our impact.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#waitlist" className="bg-noma-yellow text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 transition">Farmer Waitlist</a>
+            <a href="mailto:partnerships@nomaapp.com" className="bg-white text-noma-green px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition">Partnerships & Investors</a>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-white">
+      {/* <section id="pricing" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Simple Pricing</h2>
@@ -317,7 +421,107 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section> */}
+
+
+      {/* Waitlist Section */}
+      <section id="waitlist" className="py-20 bg-noma-lightgreen/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Join the Farmer Waitlist
+          </h2>
+          <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
+            Be among the first <span className="font-semibold text-noma-green">10,000 farmers</span> 
+            to access NomaApp when we launch in <span className="text-noma-yellow">3 months</span>.  
+            Sign up free today!
+          </p>
+
+          {/* Form */}
+          <form className="bg-white shadow-xl rounded-2xl p-8 grid gap-6 text-left">
+            {/* Name */}
+            <div>
+              <label htmlFor="name" className="block text-gray-800 font-semibold mb-2">Full Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Enter your full name"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-noma-green focus:outline-none"
+                required
+              />
+            </div>
+
+            {/* Phone */}
+            <div>
+              <label htmlFor="phone" className="block text-gray-800 font-semibold mb-2">Phone Number</label>
+              <input
+                id="phone"
+                type="tel"
+                placeholder="+234 801 234 5678"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-noma-green focus:outline-none"
+                required
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label htmlFor="email" className="block text-gray-800 font-semibold mb-2">Email Address</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-noma-green focus:outline-none"
+                required
+              />
+            </div>
+
+            {/* Location */}
+            <div>
+              <label htmlFor="location" className="block text-gray-800 font-semibold mb-2">Location</label>
+              <input
+                id="location"
+                type="text"
+                placeholder="Village / Town / City"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-noma-green focus:outline-none"
+                required
+              />
+            </div>
+
+            {/* Crop Type */}
+            <div>
+              <label htmlFor="crop" className="block text-gray-800 font-semibold mb-2">Main Crop Grown</label>
+              <select
+                id="crop"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-noma-green focus:outline-none"
+                required
+              >
+                <option value="">Select crop</option>
+                <option value="maize">Maize</option>
+                <option value="rice">Rice</option>
+                <option value="cassava">Cassava</option>
+                <option value="soybean">Soybean</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            {/* CTA Button */}
+            <button
+              type="submit"
+              className="w-full bg-noma-green text-white py-4 rounded-lg font-semibold text-lg shadow-md hover:bg-green-800 transition"
+            >
+              Join the Waitlist Now
+            </button>
+
+            {/* Trust text */}
+            <p className="text-sm text-gray-500 text-center mt-4">
+              100% Free – Your details are safe with us.  
+              You’ll get early access + updates on launch.
+            </p>
+          </form>
+        </div>
       </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-br from-green-900 to-blue-900 text-white">
@@ -329,8 +533,8 @@ export default function Home() {
                 Join thousands of farmers worldwide who are already using NomaApp to protect their crops and increase their yields with AI-powered diagnostics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/pricing" className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">
-                  Start Your Free Trial
+                <Link href="#waitlist" className="bg-noma-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">
+                  Join Us
                 </Link>
                 <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-colors cursor-pointer whitespace-nowrap">
                   Schedule Demo
@@ -342,11 +546,11 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="flex items-center">
                   <i className="ri-mail-line text-green-400 text-xl w-6 h-6 flex items-center justify-center mr-4"></i>
-                  <span className="text-gray-300">support@nomaapp.ai</span>
+                  <span className="text-gray-300"><a href="mailto:nomaappai@gmail.com" target='_blank'>nomaappai@gmail.com</a></span>
                 </div>
                 <div className="flex items-center">
                   <i className="ri-phone-line text-green-400 text-xl w-6 h-6 flex items-center justify-center mr-4"></i>
-                  <span className="text-gray-300">+234 706 853 8000</span>
+                  <span className="text-gray-300"><a href="https://wa.me/2347068538000" target='_blank'>+234 706 853 8000</a></span>
                 </div>
                 <div className="flex items-center">
                   <i className="ri-map-pin-line text-green-400 text-xl w-6 h-6 flex items-center justify-center mr-4"></i>
@@ -367,6 +571,24 @@ export default function Home() {
               <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
                 Empowering farmers worldwide with AI-powered crop diagnosis and treatment recommendations for healthier, more productive farming.
               </p>
+              <div className="m-3">
+                <form className="flex">
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    className="px-4 py-2 rounded-l-md w-full text-gray-900"
+                  />
+                  <button 
+                    type="submit" 
+                    className="px-4 py-2 bg-green-500 rounded-r-md hover:bg-green-600 transition-colors"
+                  >
+                    Join
+                  </button>
+                </form>
+              </div>
+
+              
+
               <div className="flex space-x-4">
                 <i className="ri-twitter-fill text-gray-400 hover:text-green-400 text-xl cursor-pointer w-6 h-6 flex items-center justify-center"></i>
                 <i className="ri-facebook-fill text-gray-400 hover:text-green-400 text-xl cursor-pointer w-6 h-6 flex items-center justify-center"></i>
@@ -398,9 +620,9 @@ export default function Home() {
           
           <div className="border-t border-gray-800 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">
-                2024 NomaApp. All rights reserved.
-              </p>
+              <div className="mt-8 text-gray-400 text-sm text-center md:text-left">
+                © {new Date().getFullYear()} NomaApp. All rights reserved.
+              </div>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">Privacy Policy</a>
                 <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer">Terms of Service</a>

@@ -5,5 +5,19 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  theme: {
+    extend: {
+      colors: {
+        noma: {
+          green: "#14532D",
+          yellow: "#FACC15",
+          gray: "#374151",
+          lightgreen: "#86EFAC",
+          offwhite: "#F9FAFB",
+        },
+      },
+    },
+  }
 }
+
 

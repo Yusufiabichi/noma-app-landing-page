@@ -106,6 +106,59 @@ export default function Home() {
       </section>
 
 
+      {/* About Us Section */}
+      <section id="about" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Image */}
+            <div className="relative">
+              <img
+                src="/2.jpg"
+                alt="African farmers in the field"
+                className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-noma-green/30 to-noma-yellow/20"></div>
+            </div>
+
+            {/* Text Content */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                About <span className="text-noma-green">NomaApp</span>
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                NomaApp is an AI-powered mobile application designed to help 
+                <span className="font-semibold text-noma-green"> African smallholder farmers </span> 
+                protect their crops from pests and diseases. 
+                By combining computer vision with local agricultural expertise, 
+                we provide instant, eco-friendly, and affordable solutions 
+                 right from a farmer’s phone.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Our mission is simple: <span className="font-semibold text-noma-yellow">
+                empower farmers, increase yields, and improve food security</span> across Africa.  
+                We’re launching our first MVP in <span className="font-semibold text-noma-green">3 months</span>, 
+                and we invite farmers, agronomists, and partners to join us on this journey.
+              </p>
+              <Link
+                href="#waitlist"
+                className="inline-block bg-noma-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-800 transition-colors shadow-lg"
+              >
+                Join the Waitlist
+              </Link>
+              <Link
+                href="#waitlist"
+                className="inline-block bg-noma-yellow text-black px-8 ml-5 py-4 rounded-full text-lg font-semibold hover:bg-yellow-500 transition-colors shadow-lg"
+              >
+                Partnership & Investors
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
      {/* Features Section */}
       <section id="features" className="py-20 bg-noma-offwhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -530,7 +583,7 @@ export default function Home() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Farming?</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of farmers worldwide who are already using NomaApp to protect their crops and increase their yields with AI-powered diagnostics.
+                NomaApp is on a mission to empower millions of African farmers with AI-powered crop protection, be among the first to join the movement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="#waitlist" className="bg-noma-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">

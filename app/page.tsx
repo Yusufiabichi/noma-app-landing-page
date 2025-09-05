@@ -22,7 +22,6 @@ export default function Home() {
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
-        {/* your existing code here */}
         <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -31,8 +30,8 @@ export default function Home() {
                 <Image 
                   src="/nomaapplogo.png"
                   alt="NomaApp logo"
-                  width={10} // or your desired width
-                  height={10} // or your desired height
+                  width={10} 
+                  height={10} 
                   className="w-20 h-30 object-cover object-top"
                 />
               </span>
@@ -44,10 +43,10 @@ export default function Home() {
               <a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors cursor-pointer">Contact</a>
             </nav>
             <div className="flex items-center space-x-4">
-              <Link href="/auth" className="text-gray-700 hover:text-green-600 transition-colors cursor-pointer whitespace-nowrap">
+              <Link href="#" className="text-gray-700 hover:text-green-600 transition-colors cursor-pointer whitespace-nowrap">
                 Sign In
               </Link>
-              <Link href="/auth" className="bg-noma-green text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">
+              <Link href="#" className="bg-noma-green text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors cursor-pointer whitespace-nowrap">
                 Get Started
               </Link>
             </div>
@@ -58,9 +57,8 @@ export default function Home() {
      {/* Hero Section */}
       <section
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      // style={{backgroundImage: `url(\'https://readdy.ai/api/search-image?query=Beautiful%20agricultural%20landscape%20with%20green%20crops%20growing%20in%20fertile%20fields%20under%20bright%20blue%20sky%2C%20modern%20farming%20technology%20integrated%20seamlessly%20with%20nature%2C%20vibrant%20green%20colors%2C%20professional%20photography%20style%2C%20high%20resolution%2C%20peaceful%20rural%20setting%20with%20mountains%20in%20background&width=1920&height=1080&seq=hero-bg&orientation=landscape\')`}}>
         style={{
-          backgroundImage: "url('/6.jpg')" // put a static hero image in /public
+          backgroundImage: "url('/6.jpg')" 
         }}
       >
         {/* Overlay */}
@@ -83,7 +81,7 @@ export default function Home() {
             {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/waitlist"
+                href="#waitlist"
                 className="bg-noma-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-800 transition-colors cursor-pointer whitespace-nowrap shadow-lg"
               >
                 Join the Waitlist
@@ -114,7 +112,7 @@ export default function Home() {
             {/* Image */}
             <div className="relative">
               <img
-                src="/2.jpg"
+                src="/farmer.jpg"
                 alt="African farmers in the field"
                 className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
               />
@@ -127,19 +125,17 @@ export default function Home() {
                 About <span className="text-noma-green">NomaApp</span>
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                NomaApp is an AI-powered mobile application designed to help 
+                NomaApp is an AI-powered mobile app helping 
                 <span className="font-semibold text-noma-green"> African smallholder farmers </span> 
-                protect their crops from pests and diseases. 
-                By combining computer vision with local agricultural expertise, 
-                we provide instant, eco-friendly, and affordable solutions 
-                 right from a farmer’s phone.
+                fight crop pests and diseases with instant, eco-friendly, and affordable solutions, 
+                right from their phone.
               </p>
+
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Our mission is simple: <span className="font-semibold text-noma-yellow">
-                empower farmers, increase yields, and improve food security</span> across Africa.  
-                We’re launching our first MVP in <span className="font-semibold text-noma-green">3 months</span>, 
-                and we invite farmers, agronomists, and partners to join us on this journey.
+                Our mission: empower farmers, boost yields, and strengthen food security.  
+                We’re launching our MVP in <span className="font-semibold text-noma-green">3 months.</span> Join us as a farmer, agronomist, or partner.
               </p>
+
               <Link
                 href="#waitlist"
                 className="inline-block bg-noma-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-800 transition-colors shadow-lg"
@@ -165,7 +161,7 @@ export default function Home() {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-noma-green mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               Smart Farming Made Simple
             </h2>
             <p className="text-xl text-noma-gray max-w-3xl mx-auto">
@@ -312,7 +308,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Analysis</h3>
               <p className="text-gray-700 leading-relaxed">
                 Our AI scans the photo in seconds to detect diseases, pests, and nutrient issues 
-                with <span className="font-semibold text-noma-green">95% accuracy</span>.
+                with <span className="font-semibold text-noma-green">85% accuracy</span>.
               </p>
             </div>
 
@@ -339,7 +335,7 @@ export default function Home() {
           {/* CTA */}
           <div className="mt-16 text-center">
             <a 
-              href="./waitlist/waitlist.tsx" 
+              href="#waitlist" 
               className="bg-noma-green text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-green-800 transition"
             >
               Join the Waitlist
@@ -348,6 +344,30 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Partners Section */}
+      {/* <section id="partners" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            Trusted by Our <span className="text-noma-green">Partners</span>
+          </h2>
+          <p className="text-lg text-gray-600 mb-12">
+            We are building strong collaborations with agricultural organizations, research institutes, and tech partners.
+          </p> */}
+
+          {/* Logo Carousel */}
+          {/* <div className="relative overflow-hidden">
+            <div className="flex animate-marquee space-x-12">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/FAO_logo.svg" alt="FAO" className="h-16 w-auto object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/World_Bank_logo.svg" alt="World Bank" className="h-16 w-auto object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/USAID-Identity.svg" alt="USAID" className="h-16 w-auto object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/IFAD_logo.svg" alt="IFAD" className="h-16 w-auto object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/CGIAR_logo.svg" alt="CGIAR" className="h-16 w-auto object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Bill_%26_Melinda_Gates_Foundation_logo.svg" alt="Gates Foundation" className="h-16 w-auto object-contain" />
+            </div>
+          </div>
+        </div>
+      </section> */}
 
 
       {/* Patner With us */}
